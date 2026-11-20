@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiater Jan</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="naglowek-glowny">
+        <div class="logo">Mini-Wiki: UI/UX</div>
+        <nav aria-label="Nawigacja główna">
+            <ul class="linki-nawigacji">
+                <li><a href="../index.html">10 Zasad</a></li>
+                <li><a href="../autor.html">O autorze</a></li>
+                <li><a href="../zrodla.html">Źródła</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="okruszki" aria-label="Ścieżka nawigacji">
+        <a href="../index.html">Strona główna</a> > 
+        <a href="../index.html">10 Zasad</a> > 
+        <span aria-current="page">05. Zapobiegaj błędom</span>
+    </nav>
+
+    <div class="zawartosc-strony">
+        <aside class="nawigacja-boczna">
+            <h3>Spis Zasad</h3>
+            <ul>
+                <li><a href="h01.html">01. Pokazuj status systemu</a></li>
+                <li><a href="h02.html">02. Zachowaj zgodność z rzeczywistością</a></li>
+                <li><a href="h03.html">03. Daj użytkownikowi pełną kontrolę</a></li>
+                <li><a href="h04.html">04. Trzymaj się standardów i zachowaj spójność</a></li>
+                <li><a href="h05.html" class="aktywny">05. Zapobiegaj błędom</a></li>
+                <li><a href="h06.html">06. Pozwalaj wybierać zamiast zmuszać do pamiętania</a></li>
+                <li><a href="h07.html">07. Zapewnij elastyczność i efektywność</a></li>
+                <li><a href="h08.html">08. Dbaj o estetykę i umiar</a></li>
+                <li><a href="h09.html">09. Pomagaj rozpoznać, zdiagnozować i naprawić błędy</a></li>
+                <li><a href="h10.html">10. Zadbaj o pomoc i dokumentację</a></li>
+            </ul>
+        </aside>
+
+        <main class="tresc-artykulu">
+            <header class="naglowek-artykulu">
+                <span class="plakietka">Zasada 05</span>
+                <h1>Zapobiegaj błędom</h1>
+                <p class="tlumaczenie-ang">Oryginalnie: <em>Error prevention</em></p>
+            </header>
+
+            <section class="opis">
+                <h2>O czym mówi ta zasada?</h2>
+                <p>Lepsze od dobrych komunikatów o błędach jest staranne zaprojektowanie systemu, które w ogóle zapobiega wystąpieniu problemu zanim użytkownik go popełni.</p>
+            </section>
+
+            <section class="sekcja-galerii">
+                <h2>Przykładowa Ilustracja</h2>
+                <div class="prosty-przyklad">
+                    <img src="../images/h05.png" alt="Wyszarzony przycisk i kalendarz z zablokowanymi datami">
+                    <p style="margin-top: 1rem; color: #64748b;">
+            </section>
+            <nav class="paginacja" aria-label="Nawigacja między zasadami">
+                <a href="h04.html" class="przycisk-poboczny">← 04 </a>
+                <a href="h06.html" class="przycisk-poboczny">06 →</a>
+            </nav>
+        </main>
+    </div>
+       <script>
+document.querySelectorAll('main img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:10000;cursor:zoom-out;';
+        
+        const fullImg = document.createElement('img');
+        fullImg.src = img.src;
+        fullImg.style.cssText = 'max-width:95vw;max-height:95vh;object-fit:contain;border-radius:6px;';
+        
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+
+        const zamknij = () => overlay.remove();
+        overlay.addEventListener('click', zamknij);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') zamknij(); }, { once: true });
+    });
+});
+</script>
+    
+</body>
+</html>

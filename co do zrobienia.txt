@@ -1,0 +1,6 @@
+zmniejszenie interlinii na mniejszym ekranie
+zmiana między zasadami np. <- 8 10 ->
+powiększenie zdjęcia 
+zwijanie menu w stronach na mniejszych ekranach 
+Marginesy w stronach 
+

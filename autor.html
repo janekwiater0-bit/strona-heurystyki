@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiater Jan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="naglowek-glowny">
+        <a href="index.html" class="logo" style="text-decoration: none;">Mini-Wiki: UI/UX</a>
+        <nav aria-label="Nawigacja główna">
+            <ul class="linki-nawigacji">
+                <li><a href="index.html">10 Zasad</a></li>
+                <li><a href="autor.html" aria-current="page">O autorze</a></li>
+                <li><a href="zrodla.html">Źródła</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="okruszki" aria-label="Ścieżka nawigacyjna">
+        <a href="index.html">Strona główna</a> > 
+        <span aria-current="page">O autorze</span>
+    </nav>
+
+    <main class="kontener">
+        <section class="sekcja-tytulowa">
+            <h1>Jakob Nielsen</h1>
+            <p>Pionier użyteczności interfejsów, naukowiec i wizjoner, często nazywany "królem użyteczności".</p>
+        </section>
+
+        <div class="uklad-autora">
+            <div class="tekst-autora">
+                <section class="opis" style="margin-bottom: 0;">
+                    <h2>Kim jest Jakob Nielsen?</h2>
+                    <p>Jakob Nielsen (urodzony w 1957 roku) to duński badacz i ekspert w dziedzinie interakcji człowiek-komputer (HCI). Przez prestiżowe magazyny technologiczne, takie jak <em>The New York Times</em> czy <em>Internet Magazine</em>, wielokrotnie nazywany był najważniejszym na świecie ekspertem od użyteczności stron internetowych.</p>
+                    <p>W 1998 roku, wspólnie z Donaldem Normanem (byłym wiceprezesem Apple i autorem pojęcia "User Experience"), założył firmę badawczo-doradczą <strong>Nielsen Norman Group (NN/g)</strong>. Do dziś jest to jedna z najbardziej wpływowych instytucji edukacyjnych i badawczych w branży UX na świecie.</p>
+
+                    <h3>Twórca 10 zasad heurystycznych</h3>
+                    <p>Największym i najbardziej rozpoznawalnym dziełem Nielsena jest zestaw 10 ogólnych zasad użyteczności. Zostały one opracowane na początku lat 90. (początkowo we współpracy z Rolfem Molichem). Ostateczna, dopracowana lista – ta sama, której używamy w dzisiejszym projektowaniu interfejsów cyfrowych – została opublikowana przez Nielsena w 1994 roku.</p>
+
+                    <h3>"Tania inżynieria użyteczności" (Discount Usability Engineering)</h3>
+                    <p>Przed pracami Nielsena, testy użyteczności były niezwykle drogim i czasochłonnym procesem, zarezerwowanym tylko dla największych korporacji z laboratoriami badawczymi. Jakob Nielsen zrewolucjonizował tę dziedzinę, wprowadzając koncepcję <strong>"Discount Usability Engineering"</strong>.</p>
+                    <p>Udowodnił on, że:</p>
+                    <ul>
+                        <li>Zastosowanie prostej <strong>analizy heurystycznej</strong> przez projektanta pozwala wyłapać większość krytycznych błędów interfejsu.</li>
+                        <li>Przeprowadzenie uproszczonych testów z udziałem zaledwie <strong>5 użytkowników</strong> wystarczy, aby zidentyfikować około 85% problemów z użytecznością.</li>
+                    </ul>
+                    <p>Dzięki temu podejściu, dbanie o komfort użytkownika (UX) stało się dostępne dla każdej, nawet najmniejszej firmy tworzącej oprogramowanie.</p>
+
+                    <div style="margin-top: 2rem; text-align: left;">
+                        <a href="index.html" class="przycisk-glowny">← Przejdź do listy 10 heurystyk</a>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="zdjecia-boczne-autora">
+                <div class="galeria-autora">
+                    <h3>Zdjęcia autora</h3>
+                    <div class="siatka-autora">
+                        <div class="opakowanie-zdjecia-autora">
+                            <img src="images/nielsen-1.jpg" alt="Portret Jakoba Nielsena">
+                        </div>
+                        <div class="opakowanie-zdjecia-autora">
+                            <img src="images/nielsen-2.png" alt="Jakob Nielsen podczas wykładu">
+                        </div>
+                        <div class="opakowanie-zdjecia-autora">
+                            <img src="images/nielsen.jpg" alt="Publikacje lub praca badawcza">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="stopka-glowna">
+        <p> Opracował: Jan Wiater 22992</p>
+    </footer>
+        <script>
+document.querySelectorAll('main img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:10000;cursor:zoom-out;';
+        
+        const fullImg = document.createElement('img');
+        fullImg.src = img.src;
+        fullImg.style.cssText = 'max-width:95vw;max-height:95vh;object-fit:contain;border-radius:6px;';
+        
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+
+        const zamknij = () => overlay.remove();
+        overlay.addEventListener('click', zamknij);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') zamknij(); }, { once: true });
+    });
+});
+</script>
+</body>
+</html>

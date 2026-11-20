@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wiater Jan</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="naglowek-glowny">
+        <div class="logo">Mini-Wiki: UI/UX</div>
+        <nav aria-label="Nawigacja główna">
+            <ul class="linki-nawigacji">
+                <li><a href="../index.html">10 Zasad</a></li>
+                <li><a href="../autor.html">O autorze</a></li>
+                <li><a href="../zrodla.html">Źródła</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="okruszki" aria-label="Ścieżka nawigacji">
+        <a href="../index.html">Strona główna</a> > 
+        <a href="../index.html">10 Zasad</a> > 
+        <span aria-current="page">09. Pomagaj rozpoznać, zdiagnozować i naprawić błędy</span>
+    </nav>
+
+    <div class="zawartosc-strony">
+        <aside class="nawigacja-boczna">
+            <h3>Spis Zasad</h3>
+            <ul>
+                <li><a href="h01.html">01. Pokazuj status systemu</a></li>
+                <li><a href="h02.html">02. Zachowaj zgodność z rzeczywistością</a></li>
+                <li><a href="h03.html">03. Daj użytkownikowi pełną kontrolę</a></li>
+                <li><a href="h04.html">04. Trzymaj się standardów i zachowaj spójność</a></li>
+                <li><a href="h05.html">05. Zapobiegaj błędom</a></li>
+                <li><a href="h06.html">06. Pozwalaj wybierać zamiast zmuszać do pamiętania</a></li>
+                <li><a href="h07.html">07. Zapewnij elastyczność i efektywność</a></li>
+                <li><a href="h08.html">08. Dbaj o estetykę i umiar</a></li>
+                <li><a href="h09.html" class="aktywny">09. Pomagaj rozpoznać, zdiagnozować i naprawić błędy</a></li>
+                <li><a href="h10.html">10. Zadbaj o pomoc i dokumentację</a></li>
+            </ul>
+        </aside>
+
+        <main class="tresc-artykulu">
+            <header class="naglowek-artykulu">
+                <span class="plakietka">Zasada 09</span>
+                <h1>Pomagaj rozpoznać, zdiagnozować i naprawić błędy</h1>
+                <p class="tlumaczenie-ang">Oryginalnie: <em>Help users recognize, diagnose, and recover from errors</em></p>
+            </header>
+
+            <section class="opis">
+                <h2>Czego dotyczy ta zasada?</h2>
+                <p>Nawet najlepiej zaprojektowany interfejs nie uchroni użytkownika przed pomyłkami (np. literówki w haśle, pominięcie pola) ani awariami technicznymi serwera. Błędy są nieuniknione, ponieważ użytkownicy bywają rozproszeni, a systemy nie są niezawodne. Zasada ta działa <strong>reaktywnie</strong> – określa, jak system powinien się komunikować w momencie, gdy błąd już wystąpi, aby zminimalizować frustrację, zapobiec porzuceniu procesu (np. koszyka zakupowego) i zbudować zaufanie do produktu.</p>
+                
+                <h3>Trzy filary skutecznego komunikatu o błędzie</h3>
+                <ul>
+                    <li><strong>Rozpoznanie (Visibility):</strong> Komunikat musi być natychmiast zauważalny. Najlepszą praktyką jest tzw. <em>inline validation</em>, czyli wyświetlanie błędu tuż przy polu, które go wywołało, a nie na samej górze długiej strony.</li>
+                    <li><strong>Diagnoza (Plain Language):</strong> Należy unikać programistycznego żargonu (np. "Error 500", "NullPointer", "Invalid Syntax"). Użytkownik musi wiedzieć, co dokładnie się zepsuło, opisanym prostym, ludzkim językiem.</li>
+                    <li><strong>Naprawa (Constructive Advice):</strong> Komunikat musi zawierać precyzyjną instrukcję wyjścia z sytuacji (np. pokazując poprawny wzór danych) i <strong>nigdy</strong> nie powinien kasować dotychczas wprowadzonych przez użytkownika informacji.</li>
+                </ul>
+
+                <div class="pudelko-z-notatka" style="background-color: #f0fdf4; border-left: 4px solid #16a34a;">
+                    <h3 style="color: #15803d;">📋 Checklista: Dobre praktyki UX Microcopy w błędach</h3>
+                    <ul style="margin-top: 0.5rem; color: #166534;">
+                        <li><strong>Unikaj obwiniania:</strong> Nie używaj słów "Nielegalne znaki", "Zabroniona operacja", "Źle wpisane". Zamiast tego użyj tonu neutralnego: "To hasło wymaga znaku specjalnego".</li>
+                        <li><strong>Bądź precyzyjny:</strong> Zamiast "Nieprawidłowe dane", napisz "Adres e-mail musi zawierać znak @".</li>
+                        <li><strong>Zadbaj o dostępność (WCAG):</strong> Nigdy nie polegaj wyłącznie na czerwonym kolorze do oznaczania błędów (daltonizm). Zawsze dodawaj ikonę (np. trójkąt z wykrzyknikiem) oraz pogrubiony tekst.</li>
+                    </ul>
+                </div>
+
+                <div class="pudelko-z-notatka" style="background-color: #f8fafc; border-left: 4px solid var(--kolor-glowny);">
+                    <h3 style="color: var(--kolor-glowny);">💡 Różnice: Zasada 05 (Zapobieganie) vs Zasada 09 (Naprawianie)</h3>
+                    <p>Obie heurystyki dotyczą błędów, ale działają na zupełnie innych etapach interakcji użytkownika z systemem. Najlepsze interfejsy stosują je komplementarnie (uzupełniająco).</p>
+                    
+                    <div style="overflow-x: auto; margin-top: 1.5rem;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                            <thead>
+                                <tr style="background-color: var(--kolor-obramowania);">
+                                    <th style="padding: 1rem; border: 1px solid #cbd5e1;">Cechy</th>
+                                    <th style="padding: 1rem; border: 1px solid #cbd5e1;">Zasada 05: Zapobiegaj błędom</th>
+                                    <th style="padding: 1rem; border: 1px solid #cbd5e1;">Zasada 09: Pomagaj w błędach</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; font-weight: bold; background: var(--bialy);">Czas działania</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);"><strong>Przed</strong> wystąpieniem problemu (Proaktywnie)</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);"><strong>Po</strong> wystąpieniu problemu (Reaktywnie)</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; font-weight: bold; background: var(--bialy);">Główny cel</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Uniemożliwienie pomyłki lub ostrzeżenie przed niebezpieczną akcją.</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Wyjaśnienie, co się stało i jak najszybsze rozwiązanie zaistniałego problemu.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; font-weight: bold; background: var(--bialy);">Typowe mechanizmy</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Ograniczenia wprowadzania (np. zablokowane daty w kalendarzu), okna potwierdzenia ("Czy na pewno usunąć?"), wyszarzone przyciski, sugerowane hasła (dropdown).</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Jasne komunikaty tekstowe z podświetleniem (inline validation), zachowanie wprowadzonych danych mimo błędu, przyjazne strony 404.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; font-weight: bold; background: var(--bialy);">Metafora</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Barierka ochronna na ostrym zakręcie.</td>
+                                    <td style="padding: 1rem; border: 1px solid #cbd5e1; background: var(--bialy);">Apteczka pierwszej pomocy i koło ratunkowe po wypadku.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sekcja-galerii">
+                <h2>Galeria: Poprawne zastosowanie zasady </h2>
+                <div class="siatka-przykladow">
+                    <article class="pudelko-przykladu dobry">
+                        <span class="etykieta-statusu">Przykład (WWW)</span>
+                        <figure>
+                            <img src="../images/www-dobry.png" alt="Formularz z błędem w walidacji e-mail">
+                        </figure>
+                        <figcaption>
+                            <strong>Co widać:</strong> Podczas rejestracji polom formularza towarzyszy wyraźna ikona ostrzegawcza i komunikat podpowiadający poprawne formaty e-maila i telefonu.<br>
+                            <strong>Analiza UX:</strong> 
+                            <ul>
+                                <li><strong>Rozpoznanie:</strong> Zastosowano czerwoną ramkę oraz ikonę.</li>
+                                <li><strong>Diagnoza i Naprawa:</strong> Zamiast generycznego komunikatu na górze ekranu, system działa punktowo (inline). Wskazuje konkretnie brakujący element (np. brak @) i nie kasuje tekstu, pozwalając na szybką edycję. Redukuje to stres użytkownika niemal do zera.</li>
+                            </ul>
+                        </figcaption>
+                    </article>
+                    <article class="pudelko-przykladu dobry">
+                        <span class="etykieta-statusu">Przykład (Mobile)</span>
+                        <figure>
+                            <img src="../images/mobile-dobry.png" alt="Brak sieci w mobilnej przeglądarce Chrome">
+                        </figure>
+                        <figcaption>
+                            <strong>Co widać:</strong> Ekran "You are offline" (z dinozaurem) w przeglądarce informujący o braku sieci, wraz z listą wskazówek naprawczych.<br>
+                            <strong>Analiza UX:</strong>
+                            <ul>
+                                <li><strong>Ton komunikatu:</strong> Przeglądarka tłumaczy awarię, zachowując pozytywny ton (niwelowany przez wbudowaną grę).</li>
+                                <li><strong>Naprawa:</strong> Podaje konkretną listę działań (Sprawdź tryb samolotowy, Włącz Wi-Fi) oraz oferuje potężne "wyjście awaryjne" – przycisk <em>"Pobierz, gdy będziesz online"</em>, uwalniając pamięć użytkownika.</li>
+                            </ul>
+                        </figcaption>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sekcja-galerii" style="margin-top: 3rem;">
+                <h2>Galeria: Naruszenia zasady </h2>
+                <div class="siatka-przykladow">
+                    <article class="pudelko-przykladu zly">
+                        <span class="etykieta-statusu">Kontrprzykład (WWW)</span>
+                        <figure>
+                            <img src="../images/www-zly.png" alt="Surowy błąd serwera 500">
+                        </figure>
+                        <figcaption>
+                            <strong>Problem:</strong> Surowa strona informująca o błędzie serwera ("HTTP ERROR 500"). Zastosowano żargon techniczny i usunięto całą nawigację witryny.<br>
+                            <strong>Skutek (Cognitive Load):</strong> Użytkownik tkwi w "ślepej uliczce". Ponieważ jedyny widoczny przycisk (Reload) przy awarii serwera zazwyczaj nie daje efektu, użytkownik jest bezradny i z poczuciem winy ("coś zepsułem") opuszcza stronę.
+                        </figcaption>
+                    </article>
+                    <article class="pudelko-przykladu zly">
+                        <span class="etykieta-statusu">Kontrprzykład (Mobile)</span>
+                        <figure>
+                            <img src="../images/mobile-zly.png" alt="Błąd kodowy z alertu systemowego">
+                        </figure>
+                        <figcaption>
+                            <strong>Problem:</strong> Systemowy pop-up podczas przesyłania danych zwraca wewnętrzny log błędu programistycznego (np. "ssl=0x9b7b7940: I/O error... Broken pipe").<br>
+                            <strong>Skutek (Brak zaufania):</strong> Aplikacja komunikuje się logami serwera zamiast językiem człowieka. Przycisk "OK" potwierdza awarię, ale niczego nie naprawia. Klient traci poczucie bezpieczeństwa (szczególnie krytyczne w aplikacjach e-commerce i FinTech).
+                        </figcaption>
+                    </article>
+                </div>
+            </section>
+            <nav class="paginacja" aria-label="Nawigacja między zasadami">
+                <a href="h08.html" class="przycisk-poboczny">← 08 </a>
+                <a href="h10.html" class="przycisk-poboczny">10  →</a>
+            </nav>
+        </main>
+    </div>
+        <script>
+document.querySelectorAll('main img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;z-index:10000;cursor:zoom-out;';
+        
+        const fullImg = document.createElement('img');
+        fullImg.src = img.src;
+        fullImg.style.cssText = 'max-width:95vw;max-height:95vh;object-fit:contain;border-radius:6px;';
+        
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+
+        const zamknij = () => overlay.remove();
+        overlay.addEventListener('click', zamknij);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') zamknij(); }, { once: true });
+    });
+});
+</script>
+</body>
+</html>
